@@ -1,4 +1,12 @@
-This is a refined public release which obsoletes all previous versions of Project64 for the most part.
+Release Changes V26 and onward:
+V26 Release - Initial
+V26 Release 1.01 - Fixed ROM browser regression
+V26 Release 1.02 - Fixed Glide64 regression with fullscreen reset, cleared Glide64 configs autocreated by the plugin, removed settings window on bootup for GLideN64/LLE, updated 2 plugin notes, added experimental ANGLE GLideN64 fork for PJ64-based SM64 hacks to additional plugins zip, updated release notes with source links and release changes.
+V26 Release 1.03 - A large number of minor things added/removed/tweaked that don't deserve any special mentioning. Notably Direct64 and Glide64 are now removed (if your PC does not support GLideN64, you should just upgrade to one that does because Direct64/Glide64 are way too buggy for regular usage).
+V26 Release 1.04 WIP - Fixed thread-related issues, fixed a language line not displaying, added Game/Cheat entries for SR2 Act 1 and Rainbow Road (Legacy SM64 ROMhacks), fixed full-length internal name reads, Usually on Top support for cheat window, made System->Cheat option behave normally after emulation ends, fixed 1 extra pixel overhead in windowed screenshots and recordings for GLideN64, use GLideN64 capturescreen function to capture screenshots in fullscreen (not working with BMP method for some reason. Who knows why, GLideN64 always has bugs in fullscreen), fixed dimension(s) not divisible by 2 error, finished tweaking shutdown function, minor changes
+Next for V26 Release 1.04 (Game.ini Update) - Update CRC's for The Missing Link (in this case in Cheat.c too) and Demon's Quest when they get updated in the future, then remove "-WIP" from the metadata, upstream sdl2 database and GLideN64 if they get anymore updates between this release and the next one. Optionally, add clear adult dungeons as child crash fix for OoT v1.2 entries if it gets ported
+
+*This release should obsolete all previous (published before this date) releases of Project64 in terms of plugin, database, retail game, and ROMhack support for Windows PCs. So if you have any previous release of Project64 installed on your PC, I suggest migrating to this one.
 
 To set this up, you'll need to download the current BruceIV-Project64-1.6.2 zip file to obtain a copy of the emulator package for your Windows PC. After extracting the folder inside, you can begin playing retail and ROMhacked N64 games right away. There is no installation process. If you ever get a prompt to install my Project64 1.6.2, be wary of malware. My Project64 1.6.2 is released as PORTABLE ONLY!
 
@@ -6,8 +14,14 @@ If desiring to patch ROMhacks, you'll need to use the Tool64 app in the Apps fol
 
 If intending to make a translation for the emulator, a sample has been provided to work off of.
 
-Finally, if intending to play multiplayer online instead of locally, an option to do that via the netplay input plugin is provided within the Additional-Input-Plugins.zip file. Also included is support for raphnet N64 to USB adapters (versions 3 and up) to allow use of an N64 controller with Project64 using raphnetraw plugins. If you have an adaptoid then you can use the N-Rage plugin already included with the emulator package.
+If intending to play multiplayer online instead of locally, an option to do that via the netplay input plugin is provided in the Additional-Plugins.zip file. Source: https://www.play64.com/netplay-plugin/
 
-I will quit actively working on the project after this release, but feel free to report any bugs you encounter during your usage of or fixes you would like to add for this build via my Project64 1.6.2 server in case I revisit the project or someone else wants to make a fork: discord.gg/cHDxa9vzQM
+Also included in the Additional-Plugins.zip file is support for raphnet N64 to USB adapters (versions 3 and up) to allow use of an N64 controller with Project64 using raphnetraw plugins. If you have an adaptoid then you can use the N-Rage plugin already included with the emulator package. Source: https://www.raphnet.net/programmation/mupen64plus-input-raphnetraw/index_en.php#5
 
-From Edwin Bruce Shankle IV
+A fork of GLideN64 which supports SM64 hacks made for Project64 is included in the Additional-Plugins.zip file with ANGLE-SM64Hacks.dll. Should theoretically allow proper native widescreen support for SM64 hacks targeting PJ64 emulators. May have slight texture flickering issues. May have display issues with missing pixels when the status bar doesn't get created and when refreshing between windowed resolutions, and should not ever be used with framebuffer enabled under any circumstances. This plugin could be prone to errors, same for the previous 2 plugins described (not tested due to lack of time). Source: https://github.com/Luna-Project64/GLideN64/releases
+
+Lastly, Direct64 and Glide64 are included in the Additional-Plugins.zip file. These are very old plugins which perform very poorly. There is little reason to use them, but they can be useful to play modern ROMhacks if GLideN64 does not work on your PC. Just don't enter fullscreen when using either of these plugins because they are very buggy! Examples of modern ROMhacks you can play with these: Ultimate Trial and Pumkin Tower.
+
+I have quit active (regular) work on the project after the previous release, but feel free to report any bugs you encounter during your usage of or fixes you would like to add for this build via my Project64 1.6.2 server for when I resume active work on the project or if someone else wants to do maintenance: discord.gg/cHDxa9vzQM
+
+From Edwin Bruce Shankle IV, 10-23-2026
